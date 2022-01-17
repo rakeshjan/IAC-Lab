@@ -1,7 +1,7 @@
 variable "region" {
   description = "The region Terraform deploys your instances"
   type        = string
-  default     = "us-west-2"
+  default     = "us-east-1"
 }
 
 variable "vpc_cidr_block" {
@@ -77,7 +77,7 @@ variable "enable_green_env" {
 }
 
 variable "green_instance_count" {
-  description = "Number of instances in green environment"
+  description = "Number of instances in blue environment"
   type        = number
   default     = 2
 }
@@ -111,4 +111,3 @@ variable "traffic_distribution" {
   description = "Levels of traffic distribution"
   type        = string
 }
-

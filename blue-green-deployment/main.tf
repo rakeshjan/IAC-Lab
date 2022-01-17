@@ -60,7 +60,7 @@ resource "random_pet" "app" {
 }
 
 resource "aws_lb" "app" {
-  name               = "main-app-${random_pet.app.id}-lb"
+  name               = "demo-app-${random_pet.app.id}-lb"
   internal           = false
   load_balancer_type = "application"
   subnets            = module.vpc.public_subnets
@@ -90,6 +90,6 @@ resource "aws_lb_listener" "app" {
           enabled  = false
           duration = 1
         }
-      }	
+      }
   }
 }
